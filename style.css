@@ -6,4 +6,5 @@ body {
 canvas {
 	background-color: lightgrey;
 	border: 1px solid;
+  cursor: cell;
 }
