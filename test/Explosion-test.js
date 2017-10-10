@@ -30,8 +30,6 @@ describe('explosions unit testing', () => {
 		assert.equal(explosion.minRadius, 45);		
 	});
 
-//an array or a colorArray
-// is the deepEqual written correctly 
 	it('should have a colorArray', () => {
 		const explosion = new Explosion();
 
@@ -43,12 +41,6 @@ describe('explosions unit testing', () => {
 
 		assert.equal(explosion.isExploded, false);
 	});
-
-	// it('should be able to draw itself', () => {
-	// 	const explosion = new Explosion();
-
-	// 	assert.equal(explosion.draw(), );
-	// });
 
 	// it('should be able to explode', () => {
 	// 	const explosion = new Explosion();

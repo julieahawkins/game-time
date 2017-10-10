@@ -11,18 +11,31 @@ const Explosion = require('../lib/Explosion.js');
 describe('base unit testing', () => {
 
 	it('should be a function', () => {
-		let base = new Base();
+		const base = new Base();
 	});
+
+	it('should take a parameter for x', () => {
+		const base = new Base(300);
+
+		assert.equal(base.x, 300);
+	});
+
+	it('should have a y position of 550', () => {
+		const base = new Base();
+
+		assert.equal(base.y, 550);
+	});
+
+	it('should have a width of 30', () => {
+		const base = new Base();
+
+		assert.equal(base.w, 30);
+	});
+
+	it('should have a width of 10', () => {
+		const base = new Base();
+
+		assert.equal(base.h, 10);
+	});
+
 }); 
-
-// its should ...
-
-//  x = x
-
-// have a set y
-
-// have a set w
-
-//  have a set h
-
-// draw()
