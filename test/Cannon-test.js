@@ -21,10 +21,10 @@ describe('cannon unit testing', () => {
 		assert.equal(cannon.x, 275);
 	});
 
-	it('should have a y of 550', () => {
+	it('should have a y of 545', () => {
 		const cannon = new Cannon ();
 
-		assert.equal(cannon.y, 550);
+		assert.equal(cannon.y, 545);
 	});
 
 	it('should have a w of 50', () => {
@@ -33,10 +33,10 @@ describe('cannon unit testing', () => {
 		assert.equal(cannon.w, 50);
 	});
 
-	it('should have an h of 35', () => {
+	it('should have an h of 50', () => {
 		const cannon = new Cannon ();
 
-		assert.equal(cannon.h, 35);
+		assert.equal(cannon.h, 50);
 	}); 
 
 	it('should have a center of width divided by two plus x', () => {
