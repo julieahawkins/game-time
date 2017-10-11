@@ -34,7 +34,7 @@ describe('explosions unit testing', () => {
 		assert.deepEqual(explosion.colorArray, ['black', 'red', 'orange', 'white']);
 	});
 
-	it('have a property of isExploded with a default of false', () => {
+	it('should have a property of isExploded with a default of false', () => {
 		const explosion = new Explosion();
 
 		assert.equal(explosion.isExploded, false);
