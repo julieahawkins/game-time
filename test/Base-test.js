@@ -2,8 +2,9 @@ const { assert } = require('chai');
 
 global.Audio = class {};
 
-//global.document = class {};
-//global.getElementById = function() {};
+global.document = {
+	getElementById: function() {}
+};
 
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
@@ -35,10 +36,10 @@ describe('base unit testing', () => {
 		assert.equal(base.w, 30);
 	});
 
-	it('should have a width of 10', () => {
+	it('should have a width of 45', () => {
 		const base = new Base();
 
-		assert.equal(base.h, 10);
+		assert.equal(base.h, 45);
 	});
 
 }); 
