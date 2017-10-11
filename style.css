@@ -1,6 +1,11 @@
+/*html {
+  height: 100%;
+}*/
+
 body {
-	background: grey;
+	background: linear-gradient(black, #5C7689) no-repeat;
   display: flex;
+  height: 100%;
   justify-content: center;
 }
 
@@ -21,7 +26,12 @@ button {
 }
 
 canvas {
-	background: lightgrey;
+	background: url('./images/city-of-dawn.jpg') no-repeat ;
+  background-position: left;
+  background-size: cover; 
 	border: 1px solid;
-  cursor: cell;
+  cursor: url('./images/focus.png') 12 12, auto;
+
+  /*needs refactor*/
+  margin: 10vh auto;
 }

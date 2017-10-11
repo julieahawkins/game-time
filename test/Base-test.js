@@ -2,6 +2,9 @@ const { assert } = require('chai');
 
 global.Audio = class {};
 
+//global.document = class {};
+//global.getElementById = function() {};
+
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
 const Missile = require('../lib/Missile.js'); 
