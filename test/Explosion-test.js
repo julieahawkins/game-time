@@ -10,10 +10,8 @@ const Explosion = require('../lib/Explosion.js');
 
 describe('explosions unit testing', () => {
 
-//is this good practice?
 	it('should be a function', () => {
 		const explosion = new Explosion();
-		// assert.equal(explosion.explosion());
 	});
 
 	it('should take parameters for x and y', () => {
