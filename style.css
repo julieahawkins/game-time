@@ -1,6 +1,15 @@
 body {
 	background-color: grey;
-	text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+
 }
 
 canvas {
