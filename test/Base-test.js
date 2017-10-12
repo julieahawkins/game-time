@@ -2,6 +2,8 @@ const { assert } = require('chai');
 
 global.Audio = class {};
 
+global.Image = class {};
+
 global.document = {
 	getElementById: function() {}
 };
