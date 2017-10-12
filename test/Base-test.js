@@ -8,14 +8,18 @@ global.document = {
 
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
+const Game = require('../lib/Game.js');
 const Missile = require('../lib/Missile.js'); 
 const Meteors = require('../lib/Meteors.js');
 const Explosion = require('../lib/Explosion.js'); 
 
 describe('base unit testing', () => {
 
-	it('should be a function', () => {
+	it('should instantiate our good friend, Base', () => {
 		const base = new Base();
+
+		assert.isFunction(Base);
+		assert.isObject(base);
 	});
 
 	it('should take a parameter for x', () => {
