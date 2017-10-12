@@ -4,17 +4,20 @@ global.Audio = class {};
 
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
+const Game = require('../lib/Game.js');
 const Missile = require('../lib/Missile.js'); 
 const Meteors = require('../lib/Meteors.js');
 const Explosion = require('../lib/Explosion.js'); 
 
 describe('meteor unit testing', () => {
 
-	it('should be a function', () => {
+	it('should instantiate our good friend, Meteor', () => {
 		const meteors = new Meteors();
+
+		assert.isFunction(Meteors);
+		assert.isObject(meteors);
 	});
 
-//test for random?
 	it('should take random parameters for x and y', () => {
 		const meteors = new Meteors();
 
@@ -60,32 +63,13 @@ describe('meteor unit testing', () => {
 		assert.equal(meteors.hasArrived, false);
 	});
 
-	// it('should be able to move', () => {
-	// 	const meteors = new Meteors ();
+	it('should be able to move', () => {
+		const meteors = new Meteors (5, 5);
+		meteors.y = 551;
+		meteors.x = 300;
 
-	// 	assert.equal(meteors)
+		meteors.move();
 
-	// 		move() {
-	// 	if (this.y > this.targetY) {
-	// 		this.hasArrived = true;
-	// 	}
-
-	// 	const oppositeLine = this.targetY - this.y;
-	// 	const adjacentLine = this.targetX - this.x;
-	// 	const angle = Math.atan(oppositeLine/adjacentLine);
-		
-	// 	this.dx = Math.cos(angle);
-	// 	this.dy = Math.sin(angle);
-
-	// 	if (this.targetX < this.x) {
-	// 		this.dy = -this.dy;
-	// 		this.dx = -this.dx;
-	// 	}
-
-	// 	this.x += this.dx;
-	// 	this.y += this.dy; 
-	// }
-
-	// });
-
+		assert.equal(meteors.hasArrived, true);
+	});
 }); 

@@ -1,17 +1,27 @@
 const { assert } = require('chai');
 
-global.Audio = class {};
+const boom= new Audio('../sounds/boom.wav');
+
+global.Audio = class {
+	constructor() {
+		this.blah = blah;
+	}
+};
 
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
+const Game = require('../lib/Game.js');
 const Missile = require('../lib/Missile.js'); 
 const Meteors = require('../lib/Meteors.js');
 const Explosion = require('../lib/Explosion.js'); 
 
 describe('explosions unit testing', () => {
 
-	it('should be a function', () => {
+	it('should instantiate our good friend, Explosion', () => {
 		const explosion = new Explosion();
+
+		assert.isFunction(Explosion);
+		assert.isObject(explosion);
 	});
 
 	it('should take parameters for x and y', () => {
@@ -40,16 +50,20 @@ describe('explosions unit testing', () => {
 		assert.equal(explosion.isExploded, false);
 	});
 
-	// it('should be able to explode', () => {
-	// 	const explosion = new Explosion();
+	it('should be able to explode', () => {
+		const explosion = new Explosion(300, 300, 10);
+		explosion.radius = 45;
+		explosion.explode();
 
-	// 	assert.equal(explosion.explode(), );
-	// });
+		assert.equal(explosion.isExploded, true);
+	});
 
-	// it('should be able to implode', () => {
-	// 	const explosion = new Explosion();
+	it('should be able to implode', () => {
+		const explosion = new Explosion(300, 300, 10);
+		explosion.radius = 45;
+		explosion.implode();
 
-	// 	assert.equal(explosion.implode(), );
-	// });
+		assert.equal(explosion.radius, 44);
+	});
 
 }); 

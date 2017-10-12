@@ -4,16 +4,19 @@ global.Audio = class {};
 
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
+const Game = require('../lib/Game.js');
 const Missile = require('../lib/Missile.js'); 
 const Meteors = require('../lib/Meteors.js');
 const Explosion = require('../lib/Explosion.js'); 
 
 describe('cannon unit testing', () => {
 
-	it('should be a function', () => {
+	it('should instantiate our good friend, Cannon', () => {
 		const cannon = new Cannon();
-	});
 
+		assert.isFunction(Cannon);
+		assert.isObject(cannon);
+	});
 
 	it('should have an x of 275', () => {
 		const cannon = new Cannon();
@@ -63,31 +66,28 @@ describe('cannon unit testing', () => {
 		assert.equal(cannon.hasAmmo, false);
 	});
 
-	// it('should shootMissile', () => {
-	// 	const cannon = new Cannon ();
+	it.skip('be able to should shoot missiles', () => {
+		const cannon = new Cannon ();
+		const missile = new Missile(297.5, 550, 5, 5);
+		const firedMissile = missile;
+		cannon.missileArray.length = 30;
+		firedMissile.isMoving = false;
 
-	// 	assert.equal(cannon ) 
-			
-	// 		shootMissile(),
+		cannon.shootMissile(300,300);
 
-	// 		isMoving = true,
-			
-	// 		firedMissile.targetX = mouseX,
-			
-	// 		firedMissile.targetY = mouseY,
-		
-	// 		firedMissile.setVelocity(),
-		
-	// 		this.firedArray.push(firedMissile,
-	// });
+		assert.equal(cannon.missileArray.length, 29);
+		// assert.equal(firedMissile.targetX, 300);
+		// assert.equal(firedMissile.targetY, 300); 
+	});
 
-	// it ('should populateMissles', () => {
-	// 		populateMissiles() {
-	// 		for (let i = 0; i < 30; i++) {
-	// 		this.missileArray.push(new Missile(300, 550, 5, 5));
-	// 	}
-	// }
-	// });
+	it ('should populateMissiles', () => {
+		const cannon = new Cannon ();
+
+		cannon.populateMissiles();
+
+		assert.equal(cannon.hasAmmo, true);
+		assert.equal(cannon.missileArray.length, 30);
+	});
 
 }); 
 

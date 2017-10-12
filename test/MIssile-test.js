@@ -4,14 +4,18 @@ global.Audio = class {};
 
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
+const Game = require('../lib/Game.js');
 const Missile = require('../lib/Missile.js'); 
 const Meteors = require('../lib/Meteors.js');
 const Explosion = require('../lib/Explosion.js'); 
 
 describe('missile unit testing', () => {
 
-	it('should be a function', () => {
+	it('should instantiate our good friend, Missile', () => {
 		const missile = new Missile();
+
+		assert.isFunction(Missile);
+		assert.isObject(missile);
 	});
 
 	it('should take parameters for x, y, w and h', () => {
@@ -49,22 +53,21 @@ describe('missile unit testing', () => {
 		assert.equal(missile.hasArrived, false);
 	});
 
-	// it('should be able to move', () => {
-	// 	const missile = new Missile();
+	it.skip('should be able to move', () => {
+		const missile = new Missile();
 
-	// 	assert.equal(missile.)
+	// look at move in meteors
 
-	// 		move(context) {
-	// 	if(this.y < this.targetY) {
-	// 		this.isMoving = false;
-	// 		this.hasArrived = true; 
-	// 		this.dx = 0;
-	// 		this.dy = 0;
-	// 	}
-	// });
+		// assert.equal(missile.)
+		});
 
-		// it('should setVelocity', () => {
-
-		// });
+	it.skip('should setVelocity', () => {
+		const missile = new Missile();
+			// hard code dx to one 
+			// assert it eaquals -1 
+			// hard code dy to one 
+			// assert it eqauls -1
+			// assert.equal(missile.);
+	});
 
 }); 
