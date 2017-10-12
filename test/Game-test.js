@@ -78,7 +78,7 @@ describe('game unit testing', () => {
 		// assert.equal(game. , );
 	});
 
-	it.skip('should initialize by populating Missiles, Meteors and Bases as well as pick meteor targets', () => {
+	it.skip('should initialize by populating Missiles, Meteors, Bases and pick meteor targets', () => {
 		const game = new Game();
 
 		// assert.equal(game. , );

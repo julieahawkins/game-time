@@ -2,6 +2,10 @@ const { assert } = require('chai');
 
 global.Audio = class {};
 
+// global.context = {
+// 	beginPath: function() {}
+// };
+
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
 const Game = require('../lib/Game.js');
@@ -54,16 +58,32 @@ describe('missile unit testing', () => {
 		assert.equal(missile.hasArrived, false);
 	});
 
-	it.skip('should be able to move', () => {
-		const missile = new Missile();
+	it('should be able to move', () => {
+		const missile = new Missile(300, 550, 5, 5);
 
-		// assert.equal(missile.)
+		missile.dx = 1; 
+		missile.dy = 1;
+
+		missile.move();
+
+		assert.equal(missile.x, 304);
+		assert.equal(missile.y, 554);
 		});
+
+	it('should be able to arrive at destination', () => {
+		const missile = new Missile(300, 550, 5, 5);
+
+		missile.targetY = 551;
+
+		missile.move();
+
+		assert.equal(missile.hasArrived, true);
+	});
 
 	it.skip('should setVelocity', () => {
 		const missile = new Missile();
 			// hard code dx to one 
-			// assert it eaquals -1 
+			// assert it eqauls -1 
 			// hard code dy to one 
 			// assert it eqauls -1
 			// assert.equal(missile.);
