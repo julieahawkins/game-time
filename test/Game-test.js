@@ -42,7 +42,7 @@ describe('game unit testing', () => {
 	it('should have an array of bases', () => {
 		const game = new Game();
 
-		assert.deepEqual(game.baseArray, [50, 125, 200, 375, 450, 525]);
+		assert.deepEqual(game.baseXArray, [50, 125, 200, 375, 450, 525]);
 	});
 
 		it('should have the arrays of meteorArray, baseObjArray, explosionArray and crosshairArray', () => {

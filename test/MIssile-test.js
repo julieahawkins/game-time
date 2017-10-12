@@ -57,8 +57,6 @@ describe('missile unit testing', () => {
 	it.skip('should be able to move', () => {
 		const missile = new Missile();
 
-	// look at move in meteors
-
 		// assert.equal(missile.)
 		});
 
