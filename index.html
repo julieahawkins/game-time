@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Game Time</title>
-  <link type="text/css" rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <section class="left-section">
-  <button id="start-button">START GAME</button>
-  <button id="reset-button">RESET</button>
-	</section>
-	<canvas id="game" width="600" height="600"></canvas>
-  <section class="right-section">
-    
-  </section>
+  <head>
+    <meta charset="utf-8">
+    <title>Meteor Defense</title>
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+  </head>
+  <body>
 
-	 <img hidden="true" id="crosshair" src="./images/crosshairs.svg" alt="crosshair">
-   <img hidden="true" id="cannon-img" src="./images/Cannon.png" alt="cannon">
-   <img hidden="true" id="base-img" src="./images/Base.png" alt="base">
+    <section class="left-section">
+      <div class="wrapper">
+        <button id="start-button">START GAME</button>
+        <button id="reset-button">RESET</button>
+      </div>
+  	</section>
 
-  <script src="./main.bundle.js"></script>
-</body>
+    <section class="game">
+    	<canvas id="game" width="600" height="600"></canvas>
+    </section>
+
+    <section class="right-section">
+      <article class="wrapper">
+          <h2>DEFEND your 6 BASES and your CANNON!</h2>
+          <h3>HOW to PLAY:</h3>
+          <p class="instructions">Click to launch Plasma Missiles at incoming Meteors</p>
+      </article>
+    </section>
+
+    <img hidden="true" id="crosshair" src="./images/crosshairs.svg" alt="crosshair">
+    <img hidden="true" id="cannon-img" src="./images/Cannon.png" alt="cannon">
+    <img hidden="true" id="base-img" src="./images/Base.png" alt="base">
+    <script src="./main.bundle.js"></script>
+  </body>
 </html>
