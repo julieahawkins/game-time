@@ -5,6 +5,7 @@ global.Audio = class {};
 const Base = require('../lib/Base.js');
 const Cannon = require('../lib/Cannon.js');
 const Game = require('../lib/Game.js');
+const GameEntity = require('../lib/GameEntity.js');
 const Missile = require('../lib/Missile.js'); 
 const Meteors = require('../lib/Meteors.js');
 const Explosion = require('../lib/Explosion.js'); 
@@ -29,8 +30,6 @@ describe('game unit testing', () => {
 	it('should be able to instantiate base and cannon', () => {
 		const game = new Game();
 
-		// assert.equal(game.cannon);
-		assert.isObject(game.base);
 		assert.isObject(game.cannon);
 	});
 
