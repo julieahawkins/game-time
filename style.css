@@ -61,7 +61,7 @@ h3 {
 }
 
 canvas {
-	background: url('./images/city-of-dawn.jpg') no-repeat ;
+	background: url('./images/background-imgs/city-of-dawn-blue.jpg') no-repeat ;
   background-position: left;
   background-size: cover; 
 	border: 1px solid;
